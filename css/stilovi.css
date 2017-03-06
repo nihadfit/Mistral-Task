@@ -1,0 +1,58 @@
+﻿.vkolone{
+  padding-top: 10px;
+  padding-bottom: 40px;
+
+}
+
+.vkoloneTwo{
+  padding-top: 40px;
+  padding-bottom: 25px;
+
+}
+
+
+#container {
+	min-width: 210px;
+	max-width: 800px;
+	height: 200px;
+	margin: 0 auto
+}
+
+
+
+
+
+
+
+
+/*Angular stilovi*/
+.slider {
+  position: relative;
+  text-align: left;
+
+  height: 0.6em;
+  background-color: #eef2f5;
+}
+
+.slider .handle {
+  position: absolute;
+  z-index: 2;
+  width: 1.2em;
+  height: 1.2em;
+  
+}
+
+.handle {
+  top: -0.3em;
+  margin-left: -0.6em;
+}
+
+.slider .range {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  font-size: .7em;
+  background-color: #0a95dd;
+  top: 0;
+  height: 100%;
+}

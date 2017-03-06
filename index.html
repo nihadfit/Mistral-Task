@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html ng-app="angularjs-starter">
+<head>
+  <title>Mistral Task</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="js/jquery-ui.css">
+  <link rel="stylesheet" href="css/w3.css">
+  <link rel="stylesheet" type="text/css" href="css/stilovi.css">
+  <script type="text/javascript" src="js/dugmad.js"></script>
+  
+  <!--Slajder-->
+  
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script type="text/javascript" src="js/modernizr.custom.53451.js"></script>
+		
+				<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.gallery.js"></script>
+
+    
+  <!-- Dijagrami-->
+<script src="js/highcharts.js"></script>
+<script src="js/exporting.js"></script>
+
+  <!--Dijagrami kraj-->
+ <!-- External CSS and JS Libraries - Optional -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <!-- jQury Rate CSS and JS -->
+    <link rel="stylesheet" type="text/css" href="rate/rate.min.css">
+    <script type="text/javascript" src="rate/jquery.rate.min.js"></script>
+
+    <!-- Demo CSS and JS -->
+    <link rel="stylesheet" type="text/css" href="demo/demo.css">
+    <script type="text/javascript" src="demo/demo.js"></script>
+
+ <!--Angular input scrooll-->
+
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.min.js"></script>
+    <script>
+      document.write('<base href="' + document.location + '" />');
+    </script>
+    <script src="js/angScrol.js"></script>
+ <!--Angular input scrooll kraj-->
+
+<!--Kalendar
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.17/jquery-ui.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
+
+
+
+  <style>
+.spusti {padding: 10px; 
+    min-width: 210px;
+	max-width: 800px;
+	margin: 0 auto}
+
+.btn-space {margin: 13px 30px 13px 10px;}
+
+.btn-round{border-radius: 17px;}
+
+.razmak{margin-left:10px;}
+
+.btn-primary-outline {
+  background-color: transparent;
+  border-color: #ccc;
+}
+
+</style>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.gallery.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('#dg-container').gallery();
+			});
+		</script/>
+
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style>
+
+</head>
+<body ng-controller="MainCtrl" style="background-color:#efeff0;">
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8">
+     <div class="w3-panel w3-card w3-round-large w3-white">
+       <div class='embed-container'><iframe src='http://player.vimeo.com/video/66140585' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+     <h3 style="padding-top:30px;">Lord of the Rings: The Fellowship of the Ring (official trailer)</h3>
+     <p class="text-muted"><small> Lord of the Rings is an epic high-fantasy novel written by English autor J.R.R. Tolkien. The story began as a sequel to<br>
+     Tolkien's 1937 fantasy novel The Hobbit, but eventually developed into a much large work.</small></p>
+     <p class="text-muted" style="padding-top:30px;"><i class="fa fa-play"></i>&nbsp;&nbsp;12,434,934&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-heart"></i>&nbsp;&nbsp;6,563&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-comment"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;831</p>
+     
+     <div class="w3-container" style="padding-top:30px;">
+  <div class="w3-border-top">
+    <table style="width: 100%">
+	<tr>
+		<td><div class="media" style="padding-top:30px; padding-bottom:30px;">
+    <div class="media-left">
+      <img src="images/krug.png" class="media-object" height="40" width="40">
+    </div>
+    <div class="media-body">
+    <dl>
+    <dt>Sara Jameson</dt>
+    <dd class="text-muted"><small>12,353 followers</small></dd>
+  </dl>     
+     
+    </div>
+  </div>
+</td>
+		<td><button type="submit" class="btn btn-lg btn-primary-outline btn-round w3-right-align" style="background-color:#11d11f; color:white;"><i class="fa fa-check"></i>&nbsp;Follow</button></td>
+		<td><div class="media-body">
+    <dl>
+    	<div class="w3-right-align">
+    	    <dd class="text-muted w3-right-align"><small>Uploaded</small></dd>
+    <dt>8 March, 2007</dt>
+    	</div>
+
+  </dl>     
+     
+    </div>
+</td>
+	</tr>
+</table>
+
+  </div>
+</div>
+     
+     </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="w3-panel w3-card w3-round-large w3-white">
+             <p class="w3-border-bottom" style="padding-top:10px;"><strong>Related videos</strong></p>
+
+             <iframe style="width:100%; height:100%" src='http://player.vimeo.com/video/66140585' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+        <p><strong>The Lord of the Rings - Best<br>Scene of the movie (HD)</strong></p>
+        <p class="text-muted w3-border-bottom"><i class="fa fa-play"></i>&nbsp;&nbsp;8,204,301</p>
+             <iframe style="width:100%; height:100%" src='http://player.vimeo.com/video/66140585' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+        <p><strong>Lort: The Two Towers - The<br>Battle of the Hornburg</strong></p>
+        <p class="text-muted w3-border-bottom"><i class="fa fa-play"></i>&nbsp;&nbsp;2,857,112</p>
+             <iframe style="width:100%; height:100%" src='http://player.vimeo.com/video/66140585' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+        <p><strong>Lord of The Rings - Battle of Helmes<br>Deep Opening</strong></p>
+        <p class="text-muted w3-border-bottom"><i class="fa fa-play"></i>&nbsp;&nbsp;3,642,730</p>
+
+     </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+  <div class="col-sm-4"> <div class="w3-panel w3-card w3-round-large w3-white">      
+      	             
+   <table class="w3-table">
+    <tr>
+     <th id="dg-container" class="dg-container" colspan="3" style="text-align:center; padding-top:30px">
+				<div class="dg-wrapper">
+					<a href="#"><iframe style="width:100%; height:100%" src='http://player.vimeo.com/video/66140585' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe><div></div></a>
+					<a href="#"><iframe style="width:100%; height:100%" src='http://player.vimeo.com/video/66140585' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe><div></div></a>
+					<a href="#">
+					<iframe style="width:100%; height:97%" src='http://player.vimeo.com/video/66140585' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe><div></div></a>
+				</div>
+
+		<h2 style="padding-top: 20px;">Hello There</h2>
+		<p class="text-muted"><small>Imagine Dragons</small></p>
+		</th>
+    </tr>
+   </table>
+       <p class="w3-center">
+	   <img alt="Diagram" height="47" src="images/diagram.png" width="200"></p>
+     <p class="text-muted"><i class="fa fa-play"></i>&nbsp;&nbsp;3,857,109<span style="float:right;">0:53 / 3:29</span></p>
+    </div>
+  </div>
+
+<div class="col-sm-8"> <div class="w3-panel w3-card w3-round-large w3-white">
+      <div class="w3-container w3-third">
+<iframe style="width:100%; height:100%" src='http://player.vimeo.com/video/66140585' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
+</div>
+      <div class="media-body">
+    <dl>
+    <dt style="padding-top:15px">Square Feet<i class="fa fa-heart" style="color:red; float:right;"></i></dt>
+    <dd class="text-muted">Noisia</dd>
+    <dd><img alt="Skala" src="images/skala.png" width="100%"></dd>
+    <slider-range min="0" max="400" step="1000" value-min="search.amount_min" value-max="search.amount_max"></slider-range><br>
+    <dd><p class="text-muted" style="padding-top:3px"><i class="fa fa-play"></i>&nbsp;&nbsp;12,434,934&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-heart"></i>&nbsp;&nbsp;6,563&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-comment"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;831<span style="float:right;">0:53 / 3:29</span></p></dd>
+  </dl>        
+  </div> 
+   </div>
+   <div class="w3-panel  w3-round-large w3-white">
+      <div class="col-sm-3 w3-round-large w3-white">
+<div class='embed-container'><iframe src='http://player.vimeo.com/video/66140585' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div></div>
+      <div class="media-body w3-round-large w3-white">
+    <dl>
+    <dt style="padding-top:15px">Something From Nothing<i class="fa fa-heart" style="color:red; float:right;"></i></dt>
+    <dd class="text-muted">Foo Fighters - Sonic Highways</dd>
+    <dd><img alt="Skala" src="images/skala.png" width="100%"></dd>
+    <dd><p class="text-muted" style="padding-top:30px"><i class="fa fa-play"></i>&nbsp;&nbsp;247,574&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-heart"></i>&nbsp;&nbsp;3,859&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-comment"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;142<span style="float:right;">0:53 / 3:29</span></p></dd>
+  </dl>        
+  </div>
+    </div>
+  </div>
+
+
+<!--<div class="col-sm-8 w3-panel w3-round-large w3-white">
+<div class="w3-container w3-third">
+<iframe style="width:100%; height:100%" src='http://player.vimeo.com/video/66140585' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
+</div>
+<div class="media-body">
+    <dl>
+    <dt style="padding-top:15px">Square Feet<i class="fa fa-heart" style="color:red; float:right;"></i></dt>
+    <dd class="text-muted">Noisia</dd>
+    <dd><img alt="Skala" src="images/skala.png" width="100%"></dd>
+    <dd><p class="text-muted" style="padding-top:30px"><i class="fa fa-play"></i>&nbsp;&nbsp;3,857,109<span style="float:right;">0:53 / 3:29</span></p></dd>
+  </dl>     
+    </div>
+   </div>-->
+
+  
+  </div>
+</div>
+
+
+
+<div class="container">
+
+<div class="row">
+    <div class="col-sm-4"> <div class="w3-panel w3-card w3-round-large w3-white">      
+      	             
+   <table class="w3-table">
+    <tr>
+     <th class="w3-border-bottom" colspan="3" style="padding-top:15px; padding-bottom:15px">Best new products<a href="#"><span style="float:right" class="glyphicon glyphicon-option-horizontal"></span></a></th>
+    </tr>
+    <tr>
+     <th class="w3-border-bottom" colspan="3" style="text-align:center; height: 355px; padding-top:30px">
+	 <img alt="redWach" src="images/redWatch.png" width="100%;">
+	  <h2>Fetbit Sorge</h2>
+	  <p>$169.99</p>
+	 </th>
+    </tr>
+    <tr>
+     <td class="w3-border-right" style="text-align:left; padding-top:15px; padding-bottom:15px"><i class="fa fa-angle-left"></i></td>
+     <td style="text-align:center; padding-top:15px; padding-bottom:15px"><i class="fa fa-circle" style="color:#0a95dd"></i> <i class="fa fa-circle" style="color:#efeff0"></i>&nbsp;<i class="fa fa-circle" style="color:#efeff0"></i>&nbsp;<i class="fa fa-circle" style="color:#efeff0"></i></td>
+     <td class="w3-border-left" style="text-align:right; padding-top:15px; padding-bottom:15px"><i class="fa fa-angle-right"></i>&nbsp;&nbsp;&nbsp; </td>
+    </tr>
+   </table>
+        
+    </div>
+  </div>
+  
+   
+   <div class="col-sm-8"> <div class="w3-panel w3-card w3-round-large w3-white">
+      
+      <div class="w3-row">
+  <div class="w3-container w3-half w3-border-right">
+  <table class="w3-table" style="width:100%;">
+    
+    <tr>
+     <th class="w3-border-bottom" colspan="3" style="text-align:center; height: 340px; padding-top:45px">
+     
+	 <img alt="Slusalice" src="images/slusalice.png" width="100%"><h2>Fetbit Sorge</h2>
+	  <p>$169.99</p>
+	 </th>
+    </tr>
+    <tr>
+     <td class="w3-border-right" style="text-align:left; padding-top:15px; padding-bottom:15px"><i class="fa fa-angle-left"></i></td>
+     <td style="text-align:center; padding-top:15px; padding-bottom:15px"><i class="fa fa-circle" style="color:#0a95dd"></i> <i class="fa fa-circle" style="color:#efeff0"></i>&nbsp;<i class="fa fa-circle" style="color:#efeff0"></i>&nbsp;<i class="fa fa-circle" style="color:#efeff0"></i></td>
+     <td class="w3-border-left" style="text-align:right; padding-top:15px; padding-bottom:15px"><i class="fa fa-angle-right"></i>&nbsp;&nbsp;&nbsp; </td>
+    </tr>
+   </table>
+
+  </div>
+  <div class="w3-container w3-half">
+<table class="w3-table">
+     <th class="w3-border-bottom" colspan="2" style=" height: 355px; padding-top:30px">
+    <dl>
+    <dt style="font-size:xx-large; padding-left:2%;">QuietComfort 24</dt>
+    <dd style="padding-left:2%;"><i class="fa fa-star" style="color:#eb7e14">&nbsp;</i><i class="fa fa-star" style="color:#eb7e14">&nbsp;</i><i class="fa fa-star" style="color:#eb7e14">&nbsp;</i><i class="fa fa-star" style="color:#eb7e14">&nbsp;</i><i class="fa fa-star" style="color:#ebeff2">&nbsp;</i>4.1 (674 votes)</dd>
+  </dl><p class="text-muted">We've designed our industry-leading<br>headphones with higher-quality materials and<br>finishes. They're lightweight.</p> 	 </th>
+    <tr>
+     <td class="w3-border-right w3-border-bottom" style="text-align:left; padding-top:15px; padding-bottom:15px; width: 50%;"><span class="text-muted">Price:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:large"><strong>$249</strong></span></td>
+     <td class="w3-border-left w3-border-bottom" style="text-align:right; padding-top:15px; padding-bottom:15px"><span class="text-muted"><small></small>Shiping:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:large"><strong>Free</strong></span></td>
+    <tr>
+     <td class="w3-border-bottom" style="text-align:left; padding-top:30px; padding-bottom:15px; width: 50%;">
+	 &nbsp;</td>
+     <td class="w3-border-bottom" style="text-align:right; padding-top:15px; padding-bottom:15px"></td>
+    </tr>
+    <tr>
+     <td class="w3-border-right" style="text-align:center; padding-top:15px; padding-bottom:15px; width: 50%;"><i class="fa fa-shopping-bag" style="color:black"></i><small>&nbsp;&nbsp;&nbsp;&nbsp; Add to bag</small></td>
+     <td class="w3-border-left" style="text-align:center; padding-top:15px; padding-bottom:15px; background-color:#11d11f; color:white"><i class="fa fa-credit-card"></i><small>&nbsp;&nbsp;&nbsp;&nbsp; Buy Now</small></td>
+    </tr>
+   </table>
+
+  </div>
+</div>
+    </div>
+   </div>
+ </div>
+
+
+<div class="row">
+    <div class="col-sm-8"> <div class="w3-panel w3-card w3-round-large vkolone w3-white">
+      <img alt="smartWach" height="270" src="images/sat.png" width="250" style="float:right;"><br>
+      <h1 class="razmak">The smartest clock that<br>was ever made!</h1>
+      <p class="razmak">The Lord of the Rings is an epic
+	  high-fantasy novel<br>written by English autor J.R.R. Tolkien. The story<br> 
+	  began as a sequel to Tolkien&#39;s work.</p>
+	  
+        
+        <p style="padding-top:45px;"><button type="button" class="btn btn-lg btn-primary-outline btn-round" style="background-color:#0a95dd">
+		See the features <span class="glyphicon glyphicon-menu-right"></span></button></p>
+    </div>
+  </div>
+  
+   
+   <div class="col-sm-4"> <div class="w3-panel w3-card w3-round-large vkolone" style="background-color:#33a7e3; color:white">
+    <div style="text-align:center; padding-top:38px">
+     <h2>Subscribe to newsletter</h2>
+     <p>Get in touch with fresh news from pur<br>company and share it.</p>
+    </div>
+      <p style="padding: 1px;">
+      <form class="form-horizontal">
+    <div class="form-group">
+      <div class="col-sm-10" style="width:100%">          
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password" style="height: 50px">
+      </div>
+    </div>
+    <div class="form-group" style="text-align:center; padding-top:10px">        
+      <button type="submit" class="btn btn-lg btn-primary-outline btn-round" style="background-color:#11d11f; color:white;"><i class="fa fa-check"></i>&nbsp;Subscribe</button>
+    </div>
+  </form>
+
+        
+    </div>
+   </div>
+ </div>
+
+
+
+  <div class="row">
+     
+      <div class="col-sm-3" id="datepicker" style="padding-top:15px"></div>
+        <script>
+     $( function() {
+    $( "#datepicker" ).datepicker();
+     } );
+  </script>
+<!--Kalendar-->
+
+   <div class="col-sm-3"> <div class="w3-panel w3-card w3-round-large vkolone w3-white">
+     <p style="padding-top:10px;">Filters<span  style="float:right;"><button type="button" class="btn btn-link btn-sm">Clear all&nbsp; <i class="fa fa-trash-o"></i></button></span></p><hr>
+      <div>
+      <button id="skriveno" type="button" class="btn btn-primary-outline btn-round btn-sm" style="color:#8dccec">   <!--folder js/dugmad.js da sakrije dugmad po potrebi-->
+	  <strong>Sony </strong><span onclick="this.parentElement.style.display='none'">&nbsp;<strong>x</strong></span></button>
+      <button type="button" class="btn btn-link btn-sm">Apple</button>
+      <button id="skriveno1" type="button" class="btn btn-primary-outline btn-round btn-sm" style="color:#8dccec">
+	  <strong>Bose</strong><span onclick="this.parentElement.style.display='none'">&nbsp;<strong> x</strong></span></button>
+	  </div>
+	  <div style="padding-top:10px;">
+	   <button id="skriveno2" type="button" class="btn btn-primary-outline btn-round btn-sm" style="color:#8dccec">
+	  <strong>Dell</strong><span onclick="this.parentElement.style.display='none'">&nbsp;<strong> x</strong></span></button>
+	  <button id="skriveno3" type="button" class="btn btn-primary-outline btn-round btn-sm" style="color:#8dccec">
+	  <strong>LG</strong><span onclick="this.parentElement.style.display='none'">&nbsp;<strong> x</strong></span></button>
+	  <button type="button" class="btn btn-link btn-sm">Samsung</button>
+	  </div>
+	  <div style="padding-top:10px;">
+	   <button type="button" class="btn btn-link btn-sm">Huawei</button>
+	   <button type="button" class="btn btn-link btn-sm">HP</button>
+	  </div>
+	  <hr>
+	  <p>Price range</p>
+	   <p>&nbsp;<input type="number" ng-model="search.amount_min" style="width: 45%"/>&nbsp;<input type="number" ng-model="search.amount_max" style="width: 45%"/></p>
+    <slider-range min="0" max="400" step="1000" value-min="search.amount_min" value-max="search.amount_max"></slider-range><br>
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+      <div class="panel-heading w3-white">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Another option<i style="float:right;" class="fa fa-angle-down"></i></a></h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">test.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading w3-white">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Pricing option<i style="float:right;" class="fa fa-angle-down"></i></a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body">test</div>
+      </div>
+    </div>
+  </div> 
+  <p class="text-center" style="padding-top:5px"><button type="button" class="btn btn-lg btn-primary-outline btn-round" style="background-color:#11d11f; color:white;"><i class="fa fa-check"></i>&nbsp;Apply filters</button>
+</p>
+    </div>
+   </div>
+
+
+
+<div class="col-sm-3"> <div class="w3-panel w3-card w3-round-large vkolone w3-white">
+     <p style="padding-top:10px;"><small>Categories</small></p>
+	  <hr>
+     <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Computers<i style="float:right;" class="fa fa-angle-down"></i></a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse panel-heading">
+        <div class="panel-body">test</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse02">Monitors<i style="float:right;" class="fa fa-angle-down"></i></a>
+        </h4>
+      </div>
+      <div id="collapse02" class="panel-collapse collapse panel-heading">
+        <div class="panel-body">test</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse03">Projectors<i style="float:right;" class="fa fa-angle-down"></i></a>
+        </h4>
+      </div>
+      <div id="collapse03" class="panel-collapse collapse in panel-heading">
+        <div class="panel-body">
+         <p><small>Internal<br><span style="color:#0a95dd;">External</span><br>Led<br>Small</small></p>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Lights<i style="float:right;" class="fa fa-angle-down"></i></a>
+        </h4>
+      </div>
+      <div id="collapse4" class="panel-collapse collapse panel-heading">
+        <div class="panel-body">test</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Controllers<i style="float:right;" class="fa fa-angle-down"></i></a>
+        </h4>
+      </div>
+      <div id="collapse5" class="panel-collapse collapse panel-heading">
+        <div class="panel-body">test</div>
+      </div>
+    </div>
+<div class="panel panel-default">
+      <div class="panel-body">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">Consols<i style="float:right;" class="fa fa-angle-down"></i></a>
+        </h4>
+      </div>
+      <div id="collapse6" class="panel-collapse collapse panel-heading">
+        <div class="panel-body">test</div>
+      </div>
+    </div>
+<div class="panel panel-default">
+      <div class="panel-body">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">Extras<i style="float:right;" class="fa fa-angle-down"></i></a>
+        </h4>
+      </div>
+      <div id="collapse7" class="panel-collapse collapse panel-heading">
+        <div class="panel-body">Test</div>
+      </div>
+    </div>
+
+
+  </div> 
+ </div>
+   </div>
+   
+   <div>
+   </div>
+
+
+
+  </div>
+</div>
+
+
+
+
+
+<div class="container">
+  <div class="row">
+  <div class="col-sm-3"> <div class="w3-panel w3-card w3-round-large vkoloneTwo w3-white">
+     <div class="media center">
+    <div class="media-left" style="padding-left:3%;">
+      <a class="w3-btn-floating-large" style="background-color:#0eae19;color:#fff;"><i style="font-size:24px" class="fa">&#xf201;</i></a>
+          </div>
+    <div class="media-body">
+    <dl>
+    <dt style="font-size:x-large; padding-left:2%;">$98,420</dt>
+    <dd style="padding-left:2%;"><small>Projected Revenue</small></dd>
+  </dl>     
+     
+    </div>
+  </div>
+
+      
+    </div>
+   </div>
+   
+   
+   <div class="col-sm-3"> <div class="w3-panel w3-card w3-round-large vkoloneTwo w3-white">
+     <div class="media center">
+    <div class="media-left" style="padding-left:3%;">
+      <a class="w3-btn-floating-large" style="background-color:#0682c2;color:#fff;"><i style="font-size:24px" class="glyphicon glyphicon-user"></i></a>
+          </div>
+    <div class="media-body">
+    <dl>
+    <dt style="font-size:x-large; padding-left:2%;">325</dt>
+    <dd style="padding-left:2%;"><small>New users</small></dd>
+  </dl>     
+     
+    </div>
+  </div>
+
+      
+    </div>
+   </div>
+
+
+
+<div class="col-sm-3"> <div class="w3-panel w3-card w3-round-large vkoloneTwo w3-white">
+     <div class="media center">
+    <div class="media-left" style="padding-left:3%;">
+      <a class="w3-btn-floating-large" style="background-color:#a238b9;color:#fff;"><i class="fa fa-shopping-bag" style="color:white"></i></a>
+          </div>
+    <div class="media-body">
+    <dl>
+    <dt style="font-size:x-large; padding-left:2%;">3,567</dt>
+    <dd style="padding-left:2%;">Product sold</dd>
+  </dl>     
+     
+    </div>
+  </div>
+
+      
+    </div>
+   </div>
+
+
+
+<div class="col-sm-3"> <div class="w3-panel w3-card w3-round-large vkoloneTwo w3-white">
+     <div class="media center">
+    <div class="media-left" style="padding-left:3%;">
+      <a class="w3-btn-floating-large" style="background-color:#d26d23;color:#fff;"><i class="fa fa-heart-o"></i></a>
+          </div>
+    <div class="media-body">
+    <dl>
+    <dt style="font-size:x-large; padding-left:2%;">32</dt>
+    <dd style="padding-left:2%;">Happy clients</dd>
+  </dl>     
+     
+    </div>
+  </div>
+
+      
+    </div>
+   </div>
+
+
+  
+  </div>
+</div>
+
+
+
+
+<div class="container">
+  <div class="row">
+  <div class="col-sm-3"> <div class="w3-panel w3-card w3-round-large vkoloneTwo"style="background-color:#1cc327;color:#fff;">
+     <div class="media center">
+    <div class="media-left" style="padding-left:3%;">
+      <a class="w3-btn-floating-large" style="background-color:#0eae19;color:#fff;"><i style="font-size:24px" class="fa">&#xf201;</i></a>
+          </div>
+    <div class="media-body">
+    <dl>
+    <dt style="font-size:x-large; padding-left:2%;">$98,420</dt>
+    <dd style="padding-left:2%;"><small>Projected Revenue</small></dd>
+  </dl>     
+     
+    </div>
+  </div>
+
+      
+    </div>
+   </div>
+   
+   
+   <div class="col-sm-3"> <div class="w3-panel w3-card w3-round-large vkoloneTwo"style="background-color:#0a95dd;color:#fff;">
+     <div class="media center">
+    <div class="media-left" style="padding-left:3%;">
+      <a class="w3-btn-floating-large" style="background-color:#0682c2;color:#fff;"><i style="font-size:24px" class="glyphicon glyphicon-user"></i></a>
+          </div>
+    <div class="media-body">
+    <dl>
+    <dt style="font-size:x-large; padding-left:2%;">325</dt>
+    <dd style="padding-left:2%;"><small>New users</small></dd>
+  </dl>     
+     
+    </div>
+  </div>
+
+      
+    </div>
+   </div>
+
+
+
+<div class="col-sm-3"> <div class="w3-panel w3-card w3-round-large vkoloneTwo"style="background-color:#bb4fd2;color:#fff;">
+     <div class="media center">
+    <div class="media-left" style="padding-left:3%;">
+      <a class="w3-btn-floating-large" style="background-color:#a238b9;color:#fff;"><i class="fa fa-shopping-bag" style="color:white"></i></a>
+          </div>
+    <div class="media-body">
+    <dl>
+    <dt style="font-size:x-large; padding-left:2%;">3,567</dt>
+    <dd style="padding-left:2%;">Product sold</dd>
+  </dl>     
+     
+    </div>
+  </div>
+
+      
+    </div>
+   </div>
+
+
+
+<div class="col-sm-3"> <div class="w3-panel w3-card w3-round-large vkoloneTwo"style="background-color:#f08232;color:#fff;">
+     <div class="media center">
+    <div class="media-left" style="padding-left:3%;">
+      <a class="w3-btn-floating-large" style="background-color:#d26d23;color:#fff;"><i class="fa fa-heart-o"></i></a>
+          </div>
+    <div class="media-body">
+    <dl>
+    <dt style="font-size:x-large; padding-left:2%;">32</dt>
+    <dd style="padding-left:2%;">Happy clients</dd>
+  </dl>     
+     
+    </div>
+  </div>
+
+      
+    </div>
+   </div>
+
+
+  
+  </div>
+</div>
+
+
+
+
+<div class="container">
+      <div class="row">
+    <div class="col-sm-4 row-eq-height"> 
+    <div class="w3-panel w3-card w3-round-large vkolone w3-white">
+     <p style="padding-top:10px;">Statistic<a href="#"><span style="margin-left:70%;" class="glyphicon glyphicon-option-horizontal"></span></a></p><hr>
+       <div> 
+        <h1 class="razmak"><strong>54%</strong></h1>
+      <p class="razmak text-muted" style="padding-bottom:85px;"><small>2,341 new customers</small></p> 
+        </div>
+      <div id="container"></div>
+    </div>
+   </div>
+
+  
+    <div class="col-sm-4"> <div class="w3-panel w3-card w3-round-large vkolone w3-white">
+     <p style="padding-top:10px;">Statistic<a href="#"><span style="margin-left:70%;" class="glyphicon glyphicon-option-horizontal"></span></a></p><hr>
+       <div> 
+        <p>
+  		<button class="w3-button w3-small w3-light-grey w3-white w3-border w3-round-xxlarge">Yearly</button>
+  		<button class="w3-button w3-small w3-white w3-round-xxlarge">Monthly</button>
+  		<button class="w3-button w3-small w3-white w3-round-xxlarge">Daily</button>
+       </p>
+
+        <h1 class="razmak"><strong>1,829</strong></h1>
+      <p class="razmak text-muted" style="padding-bottom:30px;"><small>Sales</small></p> 
+        </div>
+      <div id="container1" style="min-width: 210px; height: 200px; margin: auto;"></div>
+
+    </div>
+   </div>
+  
+    <div class="col-sm-4"> <div class="w3-panel w3-card w3-round-large vkolone w3-white">
+     <p style="padding-top:10px;">Statistic<a href="#"><span style="margin-left:70%;" class="glyphicon glyphicon-option-horizontal"></span></a></p><hr>
+       <div> 
+        <p>
+  		<button class="w3-button w3-small w3-light-grey w3-white w3-border w3-round-xxlarge">Yearly</button>
+  		<button class="w3-button w3-small w3-white w3-round-xxlarge">Monthly</button>
+  		<button class="w3-button w3-small w3-white w3-round-xxlarge">Daily</button>
+       </p>
+
+
+          <table style="width: 100%">
+					<tr>
+						<td><div class="rate-circle-static-big" data-value="97"></div></td>
+						<td><dl>
+						 <dd class="text-muted"><i class="fa fa-circle" style="color:#b80add"></i>&nbsp; &lt; <small>18 y.o</small></dd>
+                          <dt style="font-size:x-large">48%</dt>
+                          
+                        </dl>
+                        <dl>
+                        <dd class="text-muted"><i class="fa fa-circle" style="color:#0a95dd"></i>&nbsp; &lt; <small>18-22 y.o.</small></dd>
+                          <dt style="font-size:x-large">24%</dt>
+                           
+                        </dl>
+                        
+                        <dl>
+                        <dd class="text-muted"><i class="fa fa-circle" style="color:#1cc327"></i>&nbsp; &lt; <small>23-30 y.o.</small></dd>
+                          <dt style="font-size:x-large">16%</dt>
+                           
+                        </dl>
+                        </td>
+					</tr>
+				</table>
+
+
+        </div>
+        <hr>
+      <table style="width: 100%">
+	<tr>
+		<td style="padding-left:10px"><strong style="font-size:x-large">54%</strong><br><span class="text-muted"><small>Revenue</small></span></td>
+		<td style="padding-left:10px"><strong style="font-size:x-large">253</strong><br><span class="text-muted"><small>Sales</small></span></td>
+		<td style="padding-left:10px"><strong style="font-size:x-large">18</strong><br><span class="text-muted"><small>Contact</small></span></td>
+	</tr>
+</table>
+
+    </div>
+   </div>
+
+ </div>
+
+
+
+
+
+
+
+  <div class="row">
+    <div class="col-sm-8"> <div class="w3-panel w3-card w3-purple w3-round-large vkolone">
+      <p style="padding: 10px;">
+        <button type="button" class="btn btn-warning btn-round">Technology</button>
+        <button type="button" class="btn btn-space btn-primary btn-round">Startups</button>
+      </p>
+      <h1 class="razmak">Best startups of 2016</h1>
+      <p class="razmak">The Lord of the Rings is an epic high-fantasy novel written by English autor J.<br>R.R. Tolkien. The story began as a sequel to Tolkien's 1937 fantasy novel The<br>Hobbit, but eventually developed into a much large work.</p>
+        <p style="padding-top:45px;"><button type="button" class="btn btn-lg btn-primary-outline btn-round">Read the article <span class="glyphicon glyphicon-menu-right"></span></button></p>
+    </div>
+  </div>
+  
+   
+   <div class="col-sm-4"> <div class="w3-panel w3-card w3-round-large vkolone w3-white">
+      <p style="padding: 1px;">
+        <div class="media">
+    <div class="media-left">
+      <img src="images/krug.png" class="media-object" height="40" width="40">
+    </div>
+    <div class="media-body">
+    <dl>
+    <dt>Grag Willson</dt>
+    <dd class="text-muted"><small>17 post</small></dd>
+  </dl>     
+     
+    </div>
+  </div>
+
+      <h3 class="razmak lead"><strong>Senior Designer isn't<br>a dead end.</strong></h3>
+      <p class="razmak">Position of a Senior Designer isn&#39;t the end of your 
+	  development. You can choose various career paths and this point.</p>
+	  <p style="padding-top:18px"><button type="button" class="btn btn-lg btn-primary-outline btn-round">Read the article <span class="glyphicon glyphicon-menu-right"></span></button></p>
+        
+    </div>
+   </div>
+ </div>
+</div>
+
+  <!--Kalendar-->
+<script src="js/jquery-1.12.4.js"></script>
+  <script src="js/jquery-ui.js"></script>
+
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
+  <!--Kalendar-->
+
+  <!--Dijagram linije-->          
+<script>
+       Highcharts.chart('container', {
+    title: {
+        text: '',
+        x: 20 //center
+    },
+    subtitle: {
+        text: '',
+        x: -20
+    },
+    xAxis: {
+        categories: ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT',
+            'SUN']
+    },
+    yAxis: {
+        title: {
+            text: ''
+        },
+        plotLines: [{
+            value: 0,
+            width: 1,
+            color: '#808080'
+        }]
+    },
+    legend: {
+        verticalAlign: 'top'
+    },
+  
+    
+    series: [{
+        name: 'Upcoming',
+        data: [1.1, 1.3, 1.6, 1, 0.8, 0.6, 2]
+    }, {
+        name: 'Incoming',
+        data: [1.2, 1.5, 1.7, 1.3, 1.7, 2, 1.4]
+    }]
+});
+     
+</script>
+
+<!--Kraj dijagrama sa linijama-->
+
+<!--Dijagram kolone-->
+<script>
+Highcharts.chart('container1', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: ''
+    },
+    subtitle: {
+        text: ''
+    },
+    xAxis: {
+        categories: [
+            'Jan',
+            'Mar',
+            'May',
+            'Jul',
+            'Sep',
+            ],
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: ''
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0,
+            borderWidth: 2
+        }
+    },
+    series: [{
+        name: 'Test1',
+        data: [49.9, 71.5, 106.4, 129.2, 144.0]
+
+    }, {
+        name: 'Test2',
+        data: [83.6, 78.8, 98.5, 93.4, 106.0]
+
+    }, {
+        name: 'Test3',
+        data: [48.9, 38.8, 39.3, 41.4, 47.0]
+
+        }]
+});
+</script>
+
+</body>
+</html>
